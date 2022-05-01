@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            background: url(https://learn.canva.com/wp-content/uploads/2020/02/removing-background-images_Unsplash.jpeg); 
+            font-family: Arial, Helvetica, sans-serif;
+             color: rgb(3, 3, 3);
+             margin: 0;
+             position: absolute;
+             top: 50%;
+             left: 50%;
+             margin-right: -50%;
+             transform: translate(-50%, -50%) }
+        
+            h1{
+                margin-bottom: 20px;
+                border-bottom: 1px solid black;
+            }
+
+             button {
+                 margin-top: 8px;
+                 display: inline;
+                 align-items: center;
+                 border: 2px solid black;
+                 border-radius: 5px;
+                 background-color:rgb(108, 138, 247);
+                 font-size: 14px;
+                 color: white;
+                 padding: 3px;
+                 cursor: pointer;
+                 box-shadow: 5px 5px 5px black;
+            }
+            div.container {
+                background-color: rgb(201, 185, 190);
+                border: 1px solid black;
+                border-radius: 10px;
+                padding: 30px;
+                box-shadow: 10px 10px 10px black;
+                padding-bottom: 10px;
+            }
+            p#resultado{
+                font-size: 16px;
+                font-weight: bold;
+                margin-top: 15px;
+            }
+            footer{
+                margin-top:60%;
+                text-align: center;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                color: rgb(223, 9, 9);
+                text-shadow: 5px 5px 4px rgb(255, 255, 255);
+            }
+            #botao1 {
+                width: 20%;
+                padding: 3px;
+                margin-right: 5px;
+            }
+            #botao2 {
+                width: 24%;
+                padding: 3px;
+                margin-right: 5px;
+            }
+            #botao3 {
+                width: 25%;
+                padding: 3px;
+                margin-right: 5px;
+            }
+            #botao4 {
+                width: 23%;
+                padding: 3px;
+            }
+            </style>
+</head>
+<body>
+    <div class="container">
+    <h1>Calculo de Valores</h1>
+    <input type="text" id="numero1" placeholder="Primeiro Valor"> pelo
+    <input type="text" id="numero2" placeholder="Segundo Valor">
+    <div class="botao">
+        <button type="Submit" id="botao1" onclick="somar()">Soma</button>
+        <button type="Submit" id="botao2" onclick="subtrair()">Subtração</button>
+        <button type="Submit" id="botao3" onclick="multiplicar()">Multiplicação</button>
+        <button type="Submit" id="botao4" onclick="dividir()">Divisão</button>
+    </div>
+    <p id="resultado">Resultado</p>
+    </div>
+    </div>
+    <footer>
+        <h3>By GSLIMA</h3>
+    </footer>
+    <script>
+        num1 = window.document.getElementById("numero1");
+        num2 = window.document.getElementById("numero2");
+        resultado = window.document.getElementById("resultado");
+        function dividir() {
+                n1 = Number(num1.value);
+                n2 = Number(num2.value);
+                res = n1 / n2;
+                resultado.innerText = (`O resultado da divisão é igual a ${res}`)
+        }
+        function multiplicar() {
+        n1 = Number(num1.value);
+        n2 = Number(num2.value);
+        res = n1 * n2;
+        resultado.innerText = (`O resultado da multiplicação é igual a ${res}`)
+}
+function somar() {
+        n1 = Number(num1.value);
+        n2 = Number(num2.value);
+        res = n1 + n2;
+        resultado.innerText = (`O resultado da soma é igual a ${res}`)
+}
+function subtrair() {
+        n1 = Number(num1.value);
+        n2 = Number(num2.value);
+        res = n1 - n2;
+        resultado.innerText = (`O resultado da subtração é igual a ${res}`)
+}
+    </script>
+</body>
+</html>

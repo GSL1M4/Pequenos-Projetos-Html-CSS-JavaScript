@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: "Courier New", monospace;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
+            background: url(https://i0.wp.com/multarte.com.br/wp-content/uploads/2018/12/fundo-rosa-background44.jpg?fit=1600%2C1000&ssl=1);
+        } 
+        p#resultado {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        h1 {
+            font-size:50px;
+            text-shadow: 5px 3px 5px grey;
+        }
+        .container {
+            background-color: black;
+            color: white;
+            padding: 20px;
+            box-shadow: 10px 10px 10px black;
+            border-style: groove;
+            border-color: red;
+        }
+
+        footer{
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 100px;
+            font-size: 25px;
+            font-weight: bold;
+            border-top: 7px solid rgb(150, 0, 0);
+            border-top-style: double;
+            color:rgb(0, 0, 0);
+            font-family: cursive;
+            text-shadow: 2px 2px 4px black;
+        }
+        button {
+            padding: 3px;
+            width: 70px;
+            border-radius: 10px;
+            font-family: 'Courier New', Courier, monospace;
+            cursor: pointer;
+        }
+        input {
+            padding: 3px;
+            width: 50%;
+            border-radius: 10px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 12px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container"><h1>Qual é o seu País de origem?</h1>
+    <input type="text" id="nacionalidade" placeholder="País">
+    <button type="submit" id="botao" onclick="ver()">Ver</button>
+    <p id="resultado">Nacionalidade</p>
+</div>
+    <footer>By GSLIMA</footer>
+    <script>
+        function ver() {
+            origem = window.document.getElementById("nacionalidade");
+            resultado1 = window.document.getElementById("resultado");
+            ori = String(origem.value).toLowerCase();
+            if (ori == 'brasil'){
+            resultado1.innerText = (`Seu país de origem é ${ori}, você é Brasileiro(a)!!!`)
+            } else {
+                resultado1.innerText = (`Seu país de origem é ${ori}, você é Estrangeiro(a)!!!`)
+            }
+        }
+    </script>
+</body>
+</html>

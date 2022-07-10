@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+        margin: 0;
+        padding: 0;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    html{
+        scroll-behavior: smooth;
+    }
+
+    body{
+        background-image: linear-gradient(to right, rgba(252, 95, 95, 0.37) 0%, rgb(131, 8, 18) 100%);
+    }
+
+    #naveg {
+        background-color: rgba(36, 30, 30, 0.493);
+        border-bottom: 2px solid rgb(92, 103, 107);
+        height: 50px;
+        box-shadow: 2px 3px 5px rgb(42, 63, 62);
+        position:fixed;
+        width: 100%;
+        top: 0%;
+        overflow: hidden;
+    }
+    .item {
+        font-size: 20px;
+        display: inline-block;
+        margin-left: 10px;
+        margin-right: 10px;
+        animation-name: animenu;
+        animation-duration: 2s;
+        text-shadow: 3px 3px 3px gray;
+        
+    }
+
+    .item a{
+        text-decoration: none;
+        color: rgb(246, 242, 255);
+        font-weight: bold;
+
+    }
+
+    #logo{
+        border-radius: 50%;
+        top: 15px;
+        left: 20px;
+        max-width: 15%;
+        max-height: 15%;
+        border-color: transparent;
+        box-shadow: 2px 2px 5px 5px rgb(73, 60, 60);
+        animation-name: animacaologotipo;
+        animation-duration: 2s;
+        position:fixed;
+        top: 0%;
+        overflow: hidden;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        color: azure;
+        
+    }
+    #list{
+        float: right;
+        list-style: none;
+        margin-top: 17px;
+    }
+    .item a:hover{
+        color: rgb(55, 7, 110);
+    }
+
+
+    h3{
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 25px;
+    }
+
+
+    .h3item{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 50px;
+        background-image: linear-gradient(to left, red, yellow);
+        padding: 25px;
+        border-top: 2px double greenyellow;
+        border-bottom: 2px double greenyellow;
+        box-shadow: 2px 2px 4px 4px black;
+    }
+    .h3ti{
+        font-weight: bolder;
+        font-size: 30px;
+    }
+    #h3item{
+        margin-top: 60px;
+        position: relative;
+        max-width: 35vw;
+        max-height: 36vh;
+        border: 2px solid rgb(49, 33, 33);
+        box-shadow: 1px 1px 6px 5px rgb(24, 21, 21);
+        border-color: transparent;
+        padding:4%;
+        text-align: center;
+        font-size: 25px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        border-radius: 30px;
+        display: inline;
+        margin-right: 25px;
+        padding-top: 0%;
+    }
+
+    .it2{
+        display: flex;
+        justify-content: center;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    .container{
+        border: 3px double rgb(119, 5, 5);
+        border-radius: 10px;
+        margin-top: 15%;
+        background-image: linear-gradient(to left, rgba(252, 8, 150, 0.836), rgb(109, 22, 112));
+        margin-left: 350px;
+        padding: 25px;
+        animation-name: cont1;
+        animation-duration: 2s;
+        box-shadow: 10px 2px 5px 2px black;
+    }
+    .cont2{
+        border: 3px double rgb(119, 5, 5);
+        border-radius: 10px;
+        background-image: linear-gradient(to left, rgba(109, 22, 112), rgb(252, 8, 8, 0.596));
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+        margin-right: 350px;
+        margin-top: 50px;
+        padding: 25px;
+        animation-name: cont2;
+        animation-duration: 2s;
+        box-shadow: 10px 2px 5px 2px black;
+        margin-bottom: 15%;
+    }
+
+
+
+    .tit {
+        border: 1px solid rgb(172, 19, 19);
+        padding: 4px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: bold;
+    }
+    .img1{
+        display: inline;
+    }
+    #img1{
+        border: 2px solid rgb(49, 33, 33);
+        box-shadow: 1px 1px 6px 5px rgb(24, 21, 21);
+        border-color: transparent;
+        border-radius: 50%;
+        display: inline;
+        margin-left: 50px;
+        margin-top: 15px;
+        animation-name: imganim;
+        animation-duration: 4s;
+        animation-iteration-count: 1;
+        scroll-behavior: smooth;
+    }
+    @keyframes imganim{
+        0%{width:30%; height:20%;}
+        50%{width:25%; height:13%; border-color: brown; box-shadow: 1px 1px 20px 12px rgb(24, 21, 21);}
+        100%{width:30%; height:20%;}
+    }
+
+
+    footer ul{
+        display: flex;
+        list-style: none;
+        justify-content: center;
+        gap: 3rem;
+        margin-top: 25px;
+        padding-bottom: 15px;
+        background-color: rgba(36, 30, 30, 0.493);
+        border-bottom: 2px solid rgb(92, 103, 107);
+        padding: 15px;
+        font-size: 25px;
+        box-shadow: 2px 2px 10px 6px rgb(53, 47, 47);
+    }
+    #foter a{
+        list-style: none;
+        text-decoration: none;
+        color: white;
+        text-shadow: 5px 5px 5px black;
+
+        
+    }
+
+    h1{
+        display: inline-flex;
+        color:black;
+        font-size:80px;
+        text-shadow: 5px 5px 5px green;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        animation-delay: 0s; 
+        animation-name: titulo1;
+        animation-duration: 1s;
+    
+    }
+    .titulo {
+        text-align: center;
+        animation-name: oneum;
+        animation-duration: 0.5s;
+        margin-top: 75px;
+    }
+    @keyframes oneum{
+        0%{transform: rotate(90deg);
+        }
+        100%{
+            transform: rotate(360deg);
+
+        }
+    }
+
+
+
+
+    @keyframes titulo1{
+        0%{
+            margin-right: 10px;
+        }
+        15%{
+
+            margin-right: 20px;
+        }
+        25%{
+
+            margin-right: 30px;
+        }
+        35%{
+            margin-right: 40px;
+        }
+        45%{
+        
+            margin-right: 50px;
+        }
+        55%{
+        
+            margin-right: 40px;
+            transform: rotate(-360deg);
+            color: brown;
+        }
+        65%{
+            margin-right: 30px;
+        }
+        75%{
+
+            margin-right: 20px;
+        }
+        85%{
+            margin-right: 10px;
+        }
+        100%{
+
+            margin-right: 5px;
+        }
+    }
+
+
+
+
+    @keyframes animacaologotipo{
+        0%{
+            margin-top: 500%;
+        }
+        50%{
+            margin-top: 0%;
+        }
+        75%{
+            border: 5px solid rgb(100, 17, 17);
+        }
+        100%{
+            border:2px solid rgb(68, 68, 30);
+            box-shadow: 2px 1px 3px 3px black;
+        }
+    }
+
+    @keyframes animenu{
+        0%{
+            margin-top: 30px;
+            font-size: 20px;
+        }
+        50%{
+            margin-top:0px;
+            font-size: 30px;
+        }
+        100%{
+            font-size: 20px;
+        }
+    }
+
+    @keyframes cont1 {
+        from{margin-left: 900px; opacity: 0.5;}
+        to{margin-left: 350px; box-shadow: 10px 2px 5px 2px rgb(134, 2, 2);}
+    }
+    @keyframes cont2 {
+        from{margin-right: 900px; opacity: 0.5;}
+        to{margin-right: 350px; box-shadow: 10px 2px 5px 2px rgb(134, 2, 2);}
+    }
+
+    </style>
+</head>
+<body>
+    <nav id="naveg">
+		<ul id="list">
+            <div id="navlogo">
+                <img src="https://avatars.githubusercontent.com/u/98130988?s=400&u=282bc5aaf8d32473eb457c57e464a55e13f28453&v=4" alt="logo" id="logo" width="8%" height="12%">
+            </div>
+			<li class="item"><a href="#titulo">Home</a></li>
+			<li class="item"><a href="#divsa">ExP</a></li>
+			<li class="item"><a href="#h3item">Sobre</a></li>
+			<li class="item"><a href="#foter">Contato</a></li>
+		</ul>
+	</nav>
+    <div class="titulo" id="#titulo">
+    <h1 class="titul1">G</h1>
+    <h1 class="titul1">S</h1>
+    <h1 class="titul1">L</h1>
+    <h1 class="titul1">1</h1>
+    <h1 class="titul1">M</h1>
+    <h1 class="titul1">4</h1>
+    </div>
+    <div class="h3item">
+        <img id="img1"src="https://scontent.ffln5-1.fna.fbcdn.net/v/t39.30808-6/290084337_570443544772320_6861563857444731935_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeFrFgEgMwAatDtFDReQUzU8v6UBF_nk0xa_pQEX-eTTFr0TZLOKJP8jHtEGyL16Lp-haDJ3wSzauSh3V6FYknPy&_nc_ohc=DZtDXLcGD3YAX-nrQ-w&_nc_ht=scontent.ffln5-1.fna&oh=00_AT8sk3f-wBSSniynxyeyZDoPMDlnBQp-Y451tpOw2sifvA&oe=62CF4ECC" alt="Imagem de perfil gabriel" width="30%" height="20%">
+   
+        <div id="h3item">
+        <h3 class="h3ti"><strong><i>Sobre mim:</i></strong></h3>
+        <p>Muito prazer, eu me chamo Gabriel! Iniciei a pouco tempo no mundo da programação! Sou apaixonado por games e tecnologia! Gosto muito de aprender coisas novas, sempre tento dar o meu melhor! Tenho muita empatia, tenho pensamento e olhar crítico para tudo e gosto de repassar tudo o que eu aprendo!</p>
+        </div>
+    </div>
+
+    <div id="divsa">
+    <div class="container">
+    <h3 class="h3"><strong>Conhecimentos:</strong></h3>
+    <ul class="ules">
+        <li class="it2">Lógica de Programação<br></li>
+        <li class="it2">Inglês-Básico<br></li>
+        <li class="it2">Informática-Básico/Avançado<br></li>
+    </ul>
+    </div>
+    <div class="cont2">
+    <h3 class="h3"><strong>Linguagens:</strong></h3>   
+    <ul>
+        <li class="it2">HTML</li>
+        <li class="it2">CSS</li>
+        <li class="it2">C</li>
+        <li class="it2">JS(Básico)</li>
+        <li class="it2">PhP(Básico)</li>
+    </ul>
+    </div>
+</div>
+    <footer id="foter">
+        <ul id="uls">
+            <li><a href="https://www.facebook.com/profile.php?id=100054200395165">Facebook</a></li>
+            <li><a href="https://replit.com/@GSL1M4">Replit</a></li>
+            <li><a href="https://github.com/GSL1M4">Github</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
